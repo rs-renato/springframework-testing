@@ -1,11 +1,11 @@
 package guru.springframework.sfgpetclinic.model;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import guru.springframework.sfgpetclinic.fauxspring.Model;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PersonTest {
+class PersonTest implements ModelTests {
 
     Person person;
 
@@ -17,8 +17,23 @@ class PersonTest {
     @Test
     void propertiesShouldBeSet(){
         assertAll("Test Properties Set",
-                () -> assertEquals("Jhona", person.getFirstName(), "First name failed"),
+                () -> assertEquals("Jhon", person.getFirstName(), "First name failed"),
                 () -> assertEquals("Doe", person.getLastName(), "Last name failed")
         );
     }
+
+    @RepeatedTest(value = 10, name = "{displayName} : {currentRepetition}/{totalRepetitions}")
+    @DisplayName("Repeated Test")
+    void repeatedTests(){
+
+    }
+
+    @RepeatedTest(value = 5, name = "{displayName} : {currentRepetition}/{totalRepetitions}")
+    @DisplayName("Repeated Test")
+    void repeatedTestsWithDepInjection(TestInfo testInfo, RepetitionInfo repetitionInfo){
+        System.out.println(testInfo);
+        System.out.println(repetitionInfo);
+    }
+
+
 }

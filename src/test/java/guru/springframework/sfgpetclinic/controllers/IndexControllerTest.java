@@ -1,10 +1,9 @@
 package guru.springframework.sfgpetclinic.controllers;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import guru.springframework.sfgpetclinic.TimingExtension;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -12,8 +11,9 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.*;
 
+@ExtendWith(TimingExtension.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class IndexControllerTest {
+class IndexControllerTest implements ControllerTests{
 
     IndexController controller;
 
