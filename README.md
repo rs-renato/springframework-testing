@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/rs-renato/springframework-testing/tree/feature%2Fsection-7-test-execution.svg?style=svg)](https://circleci.com/gh/rs-renato/springframework-testing/tree/feature%2Fsection-7-test-execution)
+[![Build Status](https://app.travis-ci.com/rs-renato/springframework-testing.svg?branch=feature%2Fsection-7-test-execution)](https://app.travis-ci.com/rs-renato/springframework-testing)
+
 # Introduction to JUnit 5 with Maven
 
 All source code examples in the repository are for my [Online Course - Testing Spring Beginner to Guru](https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=GITHUB_REPO)
