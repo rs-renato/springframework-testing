@@ -69,6 +69,8 @@ local.properties
 ######################
 /log/
 /target/
+/wells-fargo-ach-service/target/**
+/wells-fargo-api-client/target/**
 
 ######################
 # Gradle
@@ -139,3 +141,4 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+index.html
