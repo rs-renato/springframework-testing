@@ -34,9 +34,9 @@ class IndexControllerTest implements ControllerTests{
     @Test
     void testTimeout(){
         // waits for operation completion
-        assertTimeout(Duration.ofMillis(100),
+        assertTimeout(Duration.ofMillis(1000),
                 () -> {
-                    TimeUnit.MILLISECONDS.sleep(50);
+                    TimeUnit.MILLISECONDS.sleep(100);
                     System.out.println("operation completed.");
                 });
     }
@@ -44,9 +44,9 @@ class IndexControllerTest implements ControllerTests{
     @Test
     void testTimeoutPeemptively(){
         // doesn't wait for operation completion
-        assertTimeoutPreemptively(Duration.ofMillis(100),
+        assertTimeoutPreemptively(Duration.ofMillis(1000),
                 () -> {
-                    TimeUnit.MILLISECONDS.sleep(50);
+                    TimeUnit.MILLISECONDS.sleep(100);
                     System.out.println("operation preemptively completed.");
                 });
     }
