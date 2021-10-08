@@ -1,5 +1,5 @@
-[![CircleCI](https://circleci.com/gh/rs-renato/springframework-testing/tree/feature%2Fsection-7-test-execution.svg?style=svg)](https://circleci.com/gh/rs-renato/springframework-testing/tree/feature%2Fsection-7-test-execution)
-[![Build Status](https://app.travis-ci.com/rs-renato/springframework-testing.svg?branch=feature%2Fsection-7-test-execution)](https://app.travis-ci.com/rs-renato/springframework-testing)
+[![CircleCI](https://circleci.com/gh/rs-renato/springframework-testing/tree/master.svg?style=svg)](https://circleci.com/gh/rs-renato/springframework-testing/tree/master)
+[![Build Status](https://app.travis-ci.com/rs-renato/springframework-testing.svg?branch=master)](https://app.travis-ci.com/rs-renato/springframework-testing)
 
 # Introduction to JUnit 5 with Maven
 
