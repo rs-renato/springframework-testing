@@ -22,14 +22,11 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 class VisitControllerTest {
 
-    @Mock
-    VisitService visitService;
-
-    @Mock
-    PetService petService;
+//    @Mock
+//    PetService petService;
 
     @Spy
-    PetMapService petMapService;
+    PetMapService petService;
 
     @InjectMocks
     VisitController visitController;
@@ -53,16 +50,16 @@ class VisitControllerTest {
         Map<String, Object> model = new HashMap<>();
         Pet pet = new Pet(1L);
 
-        petMapService.save(pet);
+        petService.save(pet);
 
-        when(petMapService.findById(anyLong())).thenCallRealMethod();
+        when(petService.findById(anyLong())).thenCallRealMethod();
 
         Visit visit = visitController.loadPetWithVisit(1L, model);
 
         assertNotNull(visit);
         assertNotNull(visit.getPet());
 
-        verify(petMapService, atLeastOnce()).findById(anyLong());
+        verify(petService, atLeastOnce()).findById(anyLong());
 
     }
 }
