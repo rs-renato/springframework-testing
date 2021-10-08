@@ -7,19 +7,19 @@ import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class OwnerControllerTest {
@@ -67,6 +67,20 @@ class OwnerControllerTest {
         assertEquals(argExpected, argumentCaptor.getValue());
         assertEquals(viewExpected, viewName);
     }
+
+    @Test
+    void processFindFormInvocationOrder() {
+        Owner owner = new Owner(1L, "Amanda", "NotFound");
+
+        ownerController.processFindForm(owner, bindingResult, model);
+        InOrder inOrder = inOrder(ownerService, bindingResult);
+
+        inOrder.verify(ownerService).findAllByLastNameLike(anyString());
+        inOrder.verify(bindingResult).rejectValue(anyString(), anyString(), anyString());
+
+        verifyZeroInteractions(model);
+    }
+
 
     /*@Test
     void processFindForm() {

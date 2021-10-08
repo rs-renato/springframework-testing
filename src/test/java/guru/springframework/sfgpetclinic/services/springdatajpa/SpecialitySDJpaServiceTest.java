@@ -14,6 +14,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -31,7 +32,8 @@ class SpecialitySDJpaServiceTest {
     @Test
     void deleteById() {
         service.deleteById(1L);
-        verify(specialtyRepository).deleteById(1L);
+//        verify(specialtyRepository).deleteById(1L);
+        then(specialtyRepository).should(atLeastOnce()).deleteById(1L);
     }
 
     @Test
@@ -41,7 +43,7 @@ class SpecialitySDJpaServiceTest {
 
         Speciality specialityFound = service.findById(1L);
         assertNotNull(specialityFound);
-        verify(specialtyRepository).findById(anyLong());
+        verify(specialtyRepository,atLeastOnce()).findById(anyLong());
     }
 
     @Test
