@@ -1,5 +1,4 @@
-[![CircleCI](https://circleci.com/gh/rs-renato/springframework-testing/tree/section-15-introduction-to-testing-with-spring-boot.svg?style=svg)](https://circleci.com/gh/rs-renato/springframework-testing/tree/section-15-introduction-to-testing-with-spring-boot)
-[![Build Status](https://app.travis-ci.com/rs-renato/springframework-testing.svg?branch=section-15-introduction-to-testing-with-spring-boot)](https://app.travis-ci.com/rs-renato/springframework-testing)
+[![CircleCI](https://circleci.com/gh/springframeworkguru/tsbb2b-sfg-brewery.svg?style=svg)](https://circleci.com/gh/springframeworkguru/tsbb2b-sfg-brewery)
 
 # Testing Spring Boot B2G - SFG Brewery
 

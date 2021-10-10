@@ -1,13 +1,13 @@
-package com.springframework.brewery;
+package guru.springframework.brewery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BreweryApplicationTests {
+public class TsbbSfgBreweryApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }
