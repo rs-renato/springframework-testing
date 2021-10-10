@@ -1,7 +1,6 @@
 package guru.springframework.brewery.web.controllers;
 
 import guru.springframework.brewery.domain.Customer;
-import guru.springframework.brewery.repositories.BeerOrderRepository;
 import guru.springframework.brewery.repositories.CustomerRepository;
 import guru.springframework.brewery.web.model.BeerOrderPagedList;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,13 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 
+/**
+ * Created by jt on 2019-03-12.
+ */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class BeerOrderControllerIT {
 
     @Autowired
-    TestRestTemplate testRestTemplate;
+    private TestRestTemplate testRestTemplate;
 
     @Autowired
     CustomerRepository customerRepository;
@@ -34,6 +36,6 @@ public class BeerOrderControllerIT {
 
         BeerOrderPagedList pagedList = testRestTemplate.getForObject(url, BeerOrderPagedList.class);
 
-        assertEquals(1, pagedList.getContent().size());
+        assertThat(pagedList.getContent()).hasSize(1);
     }
 }
