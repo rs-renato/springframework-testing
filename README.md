@@ -1,19 +1,8 @@
-[![CircleCI](https://circleci.com/gh/springframeworkguru/tsbb2b-sfg-brewery.svg?style=svg)](https://circleci.com/gh/springframeworkguru/tsbb2b-sfg-brewery)
+# SFG Spring REST Docs Example
 
-# Testing Spring Boot B2G - SFG Brewery
+This repository contains source code examples used to support my on-line courses about the Spring Framework.
 
-All source code examples in the repository are for my [Online Course - Testing Spring Beginner to Guru](https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=GITHUB_REPO)
-
-This source code repository contains JUnit 5 and Spring Framework Testing examples.
-
-## Setup
-### Requirements
-* Should use Java 11 or higher. Previous versions of Java are un-tested.
-* Use Maven 3.6.0 or higher
-
-## Support
-For questions and help:
-* Please post in course
-* Or post in the Slack Community exclusive to the course.
-
-GitHub Issues will not be addressed.
+You can learn more about the courses here:
+* [Spring Framework 5: Beginner to Guru](https://www.udemy.com/course/spring-framework-5-beginner-to-guru/?couponCode=GITHUB_SFGPETCLINIC)
+* [Testing Spring Boot: Beginner to Guru](https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=GITHUB_REPO_SF5B2G)
+* [Spring Boot Microservices with Spring Cloud](https://www.udemy.com/spring-boot-microservices-with-spring-cloud-beginner-to-guru/?couponCode=GIT_HUB2)
